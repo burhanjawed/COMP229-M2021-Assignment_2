@@ -1,0 +1,64 @@
+  <!-- Navigation -->
+  <header>
+  <% if (title === "Burhan Jawed - Personal Portfolio") { %>
+  <nav class="navbar navbar-expand-lg navbar-dark top-nav">
+  <% } else { %>
+    <nav class="navbar navbar-expand-lg navbar-dark top-nav">
+  <% } %>
+    <div class="container-fluid">
+    <!-- Logo -->
+      <a class="navbar-brand" href="/">
+      <img src="/Assets/images/logo1.png" alt="logo" width="40" height="47">
+    </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <% if (title === "Burhan Jawed - Personal Portfolio") { %>
+            <a class="nav-link active" id="homelinkactive" aria-current="page" href="/"><i class="bi bi-house-fill"></i></a>
+            <% } else { %>
+            <a class="nav-link" id="homelink" aria-current="page" href="/"><i class="bi bi-house-fill"></i></a>
+            <% } %>
+          </li>
+
+          <li class="nav-item home-underline">
+            <% if (title === "About - Burhan Jawed") { %>
+            <a class="nav-link active" id="linkactive" aria-current="page" href="/about">about</a>
+            <% } else { %>
+              <a class="nav-link" aria-current="page" href="/about">about</a>
+            <% } %>
+          </li>
+
+          <li class="nav-item home-underline">
+            <% if (title === "Projects - Burhan Jawed") { %>
+            <a class="nav-link active" id="linkactive" aria-current="page" href="/projects">projects</a>
+            <% } else { %>
+              <a class="nav-link" aria-current="page" href="/projects">projects</a>
+            <% } %>
+          </li>
+
+          <li class="nav-item home-underline">
+            <% if (title === "Services - Burhan Jawed") { %>
+            <a class="nav-link active" id="linkactive" aria-current="page" href="/services">services</a>
+            <% } else { %>
+              <a class="nav-link" aria-current="page" href="/services">services</a>
+              <% } %>
+          </li>
+
+          <li class="nav-item home-underline">
+            <% if (title === "Contact - Burhan Jawed") { %>
+            <a class="nav-link active" id="linkactive" aria-current="page" href="/contact">contact</a>
+            <% } else { %>
+              <a class="nav-link" aria-current="page" href="/contact">contact</a>
+              <% } %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

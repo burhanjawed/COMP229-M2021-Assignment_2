@@ -1,0 +1,17 @@
+<!-- Include header partial -->
+<%- include ("partials/header.ejs") %>
+
+<!-- Include main nav partial-->
+<%- include ("partials/main_nav.ejs") %>
+
+<div class="container">
+    <h1><%= message %></h1>
+    <h2><%= error.status %></h2>
+    <pre><%= error.stack %></pre>
+</div>
+
+<!-- Include bottom nav partial-->  
+<%- include ("partials/bottom_nav.ejs") %>
+
+<!-- Include footer partial-->
+<%- include ("partials/footer.ejs") %>
