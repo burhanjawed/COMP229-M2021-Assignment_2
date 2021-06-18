@@ -42,7 +42,16 @@
               <a class="nav-link" aria-current="page" href="/services">services</a>
               <% } %>
           </li>
-          <!-- Contacts List secure area and authentication link -->
+          <!-- Contact link -->
+          <li class="nav-item home-underline">
+            <% if (title === "Contact - Burhan Jawed") { %>
+            <a class="nav-link active" id="linkactive" aria-current="page" href="/contact">contact</a>
+            <% } else { %>
+              <a class="nav-link" aria-current="page" href="/contact">contact</a>
+              <% } %>
+          </li>
+
+           <!-- Contacts List secure area and authentication link -->
           <li class="nav-item home-underline">
             <% if (title === "Contacts List") { %>
             <a class="nav-link active" id="linkactive" aria-current="page" href="/contact-list">contacts list</a>
@@ -50,12 +59,22 @@
               <a class="nav-link" aria-current="page" href="/contact-list">contacts list</a>
               <% } %>
           </li>
-          <!-- Contact link -->
+
+          <!-- Login link -->
           <li class="nav-item home-underline">
-            <% if (title === "Contact - Burhan Jawed") { %>
-            <a class="nav-link active" id="linkactive" aria-current="page" href="/contact">contact</a>
+            <% if (page === "login") { %>
+            <a class="nav-link active" id="linkactive" aria-current="page" href="/login">login</a>
             <% } else { %>
-              <a class="nav-link" aria-current="page" href="/contact">contact</a>
+              <a class="nav-link" aria-current="page" href="/login">login</a>
+              <% } %>
+          </li>
+          
+           <!-- Logout link -->
+          <li class="nav-item home-underline">
+            <% if (page === "logout") { %>
+            <a class="nav-link active" id="linkactive" aria-current="page" href="/logout">logout</a>
+            <% } else { %>
+              <a class="nav-link" aria-current="page" href="/logout">logout</a>
               <% } %>
           </li>
         </ul>
