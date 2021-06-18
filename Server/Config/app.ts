@@ -6,6 +6,7 @@ import logger from 'morgan';
 import mongoose from 'mongoose';
 
 import indexRouter from '../Routes/index';
+import projectsRouter from '../Routes/projects-sub-pages';
 
 // DB configuration
 import * as DBConfig from "./db";
@@ -34,6 +35,7 @@ app.use(express.static(path.join(__dirname, '../../Client')));
 app.use(express.static(path.join(__dirname, "../../node_modules")));
 
 app.use('/', indexRouter);
+app.use('/projects', projectsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
