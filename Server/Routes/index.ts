@@ -26,13 +26,13 @@ router.get('/contact', DisplayContactPage);
 router.get('/login', DisplayLoginPage);
 
 /* POST - process login page. */
-router.get('/login', ProcessLoginPage);
+router.post('/login', ProcessLoginPage);
 
 /* GET register page. */
 router.get('/register', DisplayRegisterPage);
 
 /* POST - process register page. */
-router.get('/register', ProcessRegisterPage);
+router.post('/register', ProcessRegisterPage);
 
 /* GET - process logout page. */
 router.get('/logout', ProcessLogoutPage);

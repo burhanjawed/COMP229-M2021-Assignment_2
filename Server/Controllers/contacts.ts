@@ -3,6 +3,9 @@ import express, { Request, Response, NextFunction } from 'express';
 // connect to contact model
 import Contacts from '../Models/contacts';
 
+// import Util functions
+import { UserDisplayName } from '../Util';
+
 // display contact list page
 export function DisplayContactListPage(req: Request, res: Response, next: NextFunction): void
 {
@@ -13,7 +16,7 @@ export function DisplayContactListPage(req: Request, res: Response, next: NextFu
         }
 
         // render contact-list view
-        res.render('index', {title: 'Contacts List', page: '/contact-list/contact-list', contacts: contactsCollection});
+        res.render('index', {title: 'Contacts List', page: '/contact-list/contact-list', contacts: contactsCollection, displayName: UserDisplayName(req)});
     });
 }
 
@@ -32,7 +35,7 @@ export function DisplayUpdatePage(req: Request, res: Response, next: NextFunctio
         }
 
         // show the edit view
-        res.render('index', {title: 'Update Contact', page: '/contact-list/update', contacts: contactItemToEdit});
+        res.render('index', {title: 'Update Contact', page: '/contact-list/update', contacts: contactItemToEdit, displayName: UserDisplayName(req)});
     });
 }
 
@@ -65,7 +68,7 @@ export function ProcessUpdatePage(req: Request, res: Response, next: NextFunctio
 // display Add page
 export function DisplayAddPage(req: Request, res: Response, next: NextFunction): void
 {
-    res.render('index', {title: 'Add Contact', page: '/contact-list/add', contacts: ''});
+    res.render('index', {title: 'Add Contact', page: '/contact-list/add', contacts: '', displayName: UserDisplayName(req)});
 }
 
 // process Add page

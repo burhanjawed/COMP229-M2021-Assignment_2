@@ -6,29 +6,30 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ProcessLogoutPage = exports.ProcessRegisterPage = exports.DisplayRegisterPage = exports.ProcessLoginPage = exports.DisplayLoginPage = exports.DisplayContactPage = exports.DisplayServicesPage = exports.DisplayProjectsPage = exports.DisplayAboutPage = exports.DisplayHomePage = void 0;
 const passport_1 = __importDefault(require("passport"));
 const user_1 = __importDefault(require("../Models/user"));
+const Util_1 = require("../Util");
 function DisplayHomePage(req, res, next) {
-    res.render('index', { title: 'Burhan Jawed - Personal Portfolio', page: 'home' });
+    res.render('index', { title: 'Burhan Jawed - Personal Portfolio', page: 'home', displayName: Util_1.UserDisplayName(req) });
 }
 exports.DisplayHomePage = DisplayHomePage;
 function DisplayAboutPage(req, res, next) {
-    res.render('index', { title: 'About - Burhan Jawed', page: 'about' });
+    res.render('index', { title: 'About - Burhan Jawed', page: 'about', displayName: Util_1.UserDisplayName(req) });
 }
 exports.DisplayAboutPage = DisplayAboutPage;
 function DisplayProjectsPage(req, res, next) {
-    res.render('index', { title: 'Projects - Burhan Jawed', page: 'projects' });
+    res.render('index', { title: 'Projects - Burhan Jawed', page: 'projects', displayName: Util_1.UserDisplayName(req) });
 }
 exports.DisplayProjectsPage = DisplayProjectsPage;
 function DisplayServicesPage(req, res, next) {
-    res.render('index', { title: 'Services - Burhan Jawed', page: 'services' });
+    res.render('index', { title: 'Services - Burhan Jawed', page: 'services', displayName: Util_1.UserDisplayName(req) });
 }
 exports.DisplayServicesPage = DisplayServicesPage;
 function DisplayContactPage(req, res, next) {
-    res.render('index', { title: 'Contact - Burhan Jawed', page: 'contact' });
+    res.render('index', { title: 'Contact - Burhan Jawed', page: 'contact', displayName: Util_1.UserDisplayName(req) });
 }
 exports.DisplayContactPage = DisplayContactPage;
 function DisplayLoginPage(req, res, next) {
     if (!req.user) {
-        return res.render('index', { title: 'Login - Burhan Jawed', page: 'login', messages: req.flash('loginMessage') });
+        return res.render('index', { title: 'Login - Burhan Jawed', page: 'login', messages: req.flash('loginMessage'), displayName: Util_1.UserDisplayName(req) });
     }
     return res.redirect('/contact-list');
 }
@@ -55,7 +56,7 @@ function ProcessLoginPage(req, res, next) {
 exports.ProcessLoginPage = ProcessLoginPage;
 function DisplayRegisterPage(req, res, next) {
     if (!req.user) {
-        return res.render('index', { title: 'Register - Burhan Jawed', page: 'register', messages: req.flash('registerMessage') });
+        return res.render('index', { title: 'Register - Burhan Jawed', page: 'register', messages: req.flash('registerMessage'), displayName: Util_1.UserDisplayName(req) });
     }
     return res.redirect('/contact-list');
 }
