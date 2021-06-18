@@ -7,7 +7,6 @@
         <% if(displayName) { %>
         <!-- Update Button -->
         <a href="/contact-list/add" class="btn btn-primary mb-2" role="button"><i class="bi bi-plus-circle"></i> Add Contact</a>
-        <% } %>
 
         <!-- Table goes here -->
         <table class="table table-hover">
@@ -20,15 +19,28 @@
                 <th class="text-center col-3" scope="col">Phone Number</th>
                 <th class="text-center col-3" scope="col">Email Address</th>
 
-                <!-- if logged in show columns -->
-                <% if(displayName) { %>
                 <th class="text-center col-1" scope="col"></th>
                 <th class="text-center col-1" scope="col"></th>
-                <% } %>
             </tr>
             </thead>
-        
+            <% } else { %>
 
+         <!-- Table goes here -->
+        <table class="table table-hover">
+            <!-- Table Header -->
+            
+            <thead>
+              <tr class="d-flex">
+                <th class="text-center col-2" scope="col">#</th>
+                <th class="text-center col-3" scope="col">Name</th>
+                <th class="text-center col-3" scope="col">Phone Number</th>
+                <th class="text-center col-4" scope="col">Email Address</th>
+            </tr>
+            </thead>
+            <% } %>
+        
+            <!-- if logged in show columns -->
+                <% if(displayName) { %>
             <tbody>
                 <!-- sort contact-list alphabetically -->
                 <% let contactList = contacts.sort((a, b) => a.Name.localeCompare(b.Name)); %>
@@ -41,8 +53,6 @@
                 <td class="text-center col-3"><%= contactList[count].Number %></td>
                 <td class="text-center col-3"><%= contactList[count].Email %></td>
                 
-                <!-- if logged in show columns -->
-                <% if(displayName) { %>
                 <!-- Buttons -->
                 <td class="text-center col-1">
                   <a href="/contact-list/update/<%= contactList[count]._id %>" class="btn btn-primary btn-sm editContactBtn edit">
@@ -52,10 +62,25 @@
                   <a href="/contact-list/delete/<%= contactList[count]._id %>" class="btn btn-danger btn-sm deleteContactBtn delete">
                   <i class="bi bi-trash"></i> Delete</a>
                 </td>
-                <% } %>
               </tr>
               <% } %>
             </tbody>
+            <% } else { %>
+                <tbody>
+                <!-- sort contact-list alphabetically -->
+                <% let contactList = contacts.sort((a, b) => a.Name.localeCompare(b.Name)); %>
+
+                <!-- Repeatable Row Template -->
+              <% for(let count = 0; count < contacts.length; count++) { %>
+                <tr class="d-flex">
+                <th class="text-center col-2" scope="row"><%= count + 1 %></th>
+                <td class="text-center col-3"><%= contactList[count].Name %></td>
+                <td class="text-center col-3"><%= contactList[count].Number %></td>
+                <td class="text-center col-4"><%= contactList[count].Email %></td>
+              </tr>
+              <% } %>
+            </tbody>
+              <% } %>
           </table>
     </div>
     </div>

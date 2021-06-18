@@ -39,7 +39,7 @@ const index_1 = __importDefault(require("../Routes/index"));
 const projects_sub_pages_1 = __importDefault(require("../Routes/projects-sub-pages"));
 const contacts_1 = __importDefault(require("../Routes/contacts"));
 const DBConfig = __importStar(require("./db"));
-mongoose_1.default.connect(DBConfig.LocalURI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose_1.default.connect(DBConfig.RemoteURI, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose_1.default.connection;
 db.on('error', console.error.bind(console, 'connection error'));
 db.once('open', function () {

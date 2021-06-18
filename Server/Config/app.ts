@@ -27,7 +27,7 @@ import contactsRouter from '../Routes/contacts';
 
 // DB configuration
 import * as DBConfig from "./db";
-mongoose.connect(DBConfig.LocalURI, {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(DBConfig.RemoteURI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 // test DB connection
 const db = mongoose.connection;
