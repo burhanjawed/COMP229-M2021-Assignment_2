@@ -1,16 +1,17 @@
 import mongoose from "mongoose";
-const Schema = mongoose.Schema;
+const Schema = mongoose.Schema; // alias for Mongoose
 
-const ContactSchema = new Schema(
+/* schema for contact_list db*/
+const ContactsSchema = new Schema(
   {
-    FullName: String,
-    ContactNumber: String,
-    EmailAddress: String,
+    Name: String,
+    Number: String,
+    Email: String
   },
   {
     collection: "contacts",
   }
 );
 
-const Model = mongoose.model("Contact", ContactSchema);
+const Model = mongoose.model("Contacts", ContactsSchema);
 export default Model;
