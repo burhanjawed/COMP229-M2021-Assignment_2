@@ -15,3 +15,21 @@ export function DisplayContactListPage(req: Request, res: Response, next: NextFu
         res.render('index', {title: 'Contact List', page: 'contact-list', contacts: contactsCollection});
     });
 }
+
+export function DisplayEditPage(req: Request, res: Response, next: NextFunction): void
+{
+    let id = req.params.id;
+
+    // pass the id to db
+    Contacts.findById(id, {}, {}, (err, contactItemToEdit) =>
+    {
+        if(err)
+        {
+            console.error(err);
+            res.end(err);
+        }
+
+        // show the edit view
+        res.render('index', {title: 'Edit', page: 'edit', person: contactItemToEdit});
+    });
+}

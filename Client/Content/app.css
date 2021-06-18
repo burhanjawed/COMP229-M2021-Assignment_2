@@ -107,15 +107,6 @@ ul {
     transition: .3s all;
 }
 
-#homelink {
-  padding-top: 12px;
-}
-
-#homelinkactive {
-    color: rgb(158, 0, 0);
-    padding-top: 12px;
- }
-
  .button {
   outline: none;
  }
@@ -134,10 +125,6 @@ ul {
 
   a:hover {
     cursor: url("/Assets/images/cursor2.png"), auto;
-  }
-
-  #homelink:hover {
-    color: rgb(158, 0, 0);
   }
 
   .navbar-brand:hover {

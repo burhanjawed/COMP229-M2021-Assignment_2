@@ -1,0 +1,24 @@
+<div class="row justify-content-lg-center g-3">
+    <h1><%= title %> Contact</h1>
+
+    <form method="POST" class="col-lg-6 col-md-10 col-sm-10">
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="name">Name</span>
+            <input id="name" type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="Contact Name" name="name" value="<%= person.Name %>" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="number">Phone Number</span>
+            <input id="number" type="text" class="form-control" placeholder="Phone Number" aria-label="Phone Number" aria-describedby="Contact Phone Number" name="number" value="<%= person.Number %>" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="email">Email Address</span>
+            <input id="email" type="email" class="form-control" placeholder="Email Address" aria-label="Email Address" aria-describedby="Contact Email Address" name="email" value="<%= person.Email %>" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="editButton"><i class="bi bi-pen"></i> Edit</button>
+
+    </form>
+</div>
