@@ -1,0 +1,34 @@
+<main class="container">
+    <div class="row">
+    <div class="offset-md-1 col-md-11 ms-auto me-auto">
+        <h1 class="display-3"><%= title %><span class="other-color">.</span></h1>
+
+        <!-- Table goes here -->
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Email Address</th>
+              </tr>
+            </thead>
+            <tbody>
+
+                <!-- sort contact-list alphabetically -->
+                <% let contactList = contacts.sort((a, b) => a.Name.localeCompare(b.Name)); %>
+
+                <!-- Repeatable Row Template -->
+                <% for(let count = 0; count < contacts.length; count++) { %>
+                <tr>
+                <th scope="row"><%= count + 1 %></th>
+                <td><%= contactList[count].Name %></td>
+                <td><%= contactList[count].Number %></td>
+                <td><%= contactList[count].Email %></td>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+    </div>
+    </div>
+</main>
