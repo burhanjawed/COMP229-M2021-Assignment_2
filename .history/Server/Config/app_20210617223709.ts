@@ -5,10 +5,8 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import mongoose from 'mongoose';
 
-// import routes
 import indexRouter from '../Routes/index';
 import projectsRouter from '../Routes/projects-sub-pages';
-import contactsRouter from '../Routes/contacts';
 
 // DB configuration
 import * as DBConfig from "./db";
@@ -36,10 +34,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../Client')));
 app.use(express.static(path.join(__dirname, "../../node_modules")));
 
-// use routes
 app.use('/', indexRouter);
 app.use('/projects', projectsRouter);
-app.use('/contact-list', contactsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

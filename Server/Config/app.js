@@ -30,6 +30,7 @@ const morgan_1 = __importDefault(require("morgan"));
 const mongoose_1 = __importDefault(require("mongoose"));
 const index_1 = __importDefault(require("../Routes/index"));
 const projects_sub_pages_1 = __importDefault(require("../Routes/projects-sub-pages"));
+const contacts_1 = __importDefault(require("../Routes/contacts"));
 const DBConfig = __importStar(require("./db"));
 mongoose_1.default.connect(DBConfig.LocalURI, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose_1.default.connection;
@@ -49,6 +50,7 @@ app.use(express_1.default.static(path_1.default.join(__dirname, '../../Client'))
 app.use(express_1.default.static(path_1.default.join(__dirname, "../../node_modules")));
 app.use('/', index_1.default);
 app.use('/projects', projects_sub_pages_1.default);
+app.use('/contact-list', contacts_1.default);
 app.use(function (req, res, next) {
     next(http_errors_1.default(404));
 });

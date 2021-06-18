@@ -13,13 +13,4 @@ router.get('/about', index_1.DisplayAboutPage);
 router.get('/projects', index_1.DisplayProjectsPage);
 router.get('/services', index_1.DisplayServicesPage);
 router.get('/contact', index_1.DisplayContactPage);
-router.get('/projects/holy-cow', function (req, res, next) {
-    res.render('projects-sub-pages', { title: 'Holy Cow - Projects - Burhan Jawed', page: 'holy-cow' });
-});
-router.get('/projects/rascal-franky', function (req, res, next) {
-    res.render('projects-sub-pages', { title: 'Rascal Franky - Projects - Burhan Jawed', page: 'rascal-franky' });
-});
-router.get('/projects/readerlab', function (req, res, next) {
-    res.render('projects-sub-pages', { title: 'ReaderLab - Projects - Burhan Jawed', page: 'readerlab' });
-});
 //# sourceMappingURL=index.js.map
