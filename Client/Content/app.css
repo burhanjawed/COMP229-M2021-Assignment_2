@@ -649,10 +649,19 @@ ul {
     /* End Contact */
 
     /* Start contact-list table */
+    .table {
+      background-color: #212121;
+      border-radius: 8px;
+      border-color: #3a3a3a;
+    }
+
     td, th{
       color: white;
     }
     
     tr {
-      background-color: #212121;
+      padding-top: 4px;
+    }
+    .editContactBtn, .deleteContactBtn {
+      margin-bottom: 4px;
     }

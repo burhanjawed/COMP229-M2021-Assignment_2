@@ -30,10 +30,17 @@
             <label for="message" class="label">Message</label>
           </div>
           <div class="form-field col-lg-12">
-            <input type="submit" class="submit-btn btn-outline-light btn-lg" value="submit">
+            <input type="submit" class="submit-btn btn-outline-light btn-lg" id="contactSubmitBtn" value="submit" onclick="btnClick">
           </div>
         </div>
       </form>
       </div>
     </section>
   </main>
+
+  <script>
+  document.addEventListener("submit", function(e) {
+    e.preventDefault();
+    window.location.href = "/";
+  });
+    </script>

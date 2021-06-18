@@ -1,0 +1,39 @@
+<!-- Content for Add Page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-2 col-md-8">
+        <h1 class="display-3"><%= title %><span class="other-color">.</span></h1>
+
+        <!-- Name Text Field -->
+        <form class="form" method="POST">
+            <div class="form-group">
+                <label for="nameTextField"></label>
+                <input type="text" class="form-control" id="nameTextField" placeholder="Enter Contact Name" name="name" required>
+            </div>
+
+            <!-- Phone Text Field -->
+            <div class="form-group">
+                <label for="numberTextField"></label>
+                <input type="text" class="form-control" id="numberTextField" placeholder="Enter Contact Phone Number" name="number" required>
+            </div>
+
+            <!-- Email Text Field -->
+            <div class="form-group">
+                <label for="emailTextField"></label>
+                <input type="email" class="form-control" id="emailTextField" placeholder="Enter Contact Email Address" name="email" required>
+            </div>
+            
+            <br>
+
+            <!-- Buttons -->
+            <button class="btn btn-primary button" type="submit">
+                <i class="bi bi-plus-circle"></i> Add Contact
+            </button>
+
+            <a href="/contact-list" class="btn btn-warning">
+                <i class="bi bi-x-circle"></i> Cancel</a>
+
+        </form>
+        </div>
+    </div>
+</div>
