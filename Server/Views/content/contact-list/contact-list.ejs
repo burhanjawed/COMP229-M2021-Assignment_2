@@ -3,8 +3,11 @@
     <div class="offset-md-0 col-md-12">
         <h1 class="display-3 pb-3"><%= title %><span class="other-color">.</span></h1>
 
+        <!-- if logged in show columns -->
+        <% if(displayName) { %>
         <!-- Update Button -->
         <a href="/contact-list/add" class="btn btn-primary mb-2" role="button"><i class="bi bi-plus-circle"></i> Add Contact</a>
+        <% } %>
 
         <!-- Table goes here -->
         <table class="table table-hover">
@@ -16,8 +19,12 @@
                 <th class="text-center col-3" scope="col">Name</th>
                 <th class="text-center col-3" scope="col">Phone Number</th>
                 <th class="text-center col-3" scope="col">Email Address</th>
+
+                <!-- if logged in show columns -->
+                <% if(displayName) { %>
                 <th class="text-center col-1" scope="col"></th>
                 <th class="text-center col-1" scope="col"></th>
+                <% } %>
             </tr>
             </thead>
         
@@ -34,6 +41,8 @@
                 <td class="text-center col-3"><%= contactList[count].Number %></td>
                 <td class="text-center col-3"><%= contactList[count].Email %></td>
                 
+                <!-- if logged in show columns -->
+                <% if(displayName) { %>
                 <!-- Buttons -->
                 <td class="text-center col-1">
                   <a href="/contact-list/update/<%= contactList[count]._id %>" class="btn btn-primary btn-sm editContactBtn edit">
@@ -43,6 +52,7 @@
                   <a href="/contact-list/delete/<%= contactList[count]._id %>" class="btn btn-danger btn-sm deleteContactBtn delete">
                   <i class="bi bi-trash"></i> Delete</a>
                 </td>
+                <% } %>
               </tr>
               <% } %>
             </tbody>
