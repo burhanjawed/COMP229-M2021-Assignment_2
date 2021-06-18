@@ -21,3 +21,8 @@ router.get('/services', DisplayServicesPage);
 
 /* GET contact page. */
 router.get('/contact', DisplayContactPage);
+
+//TODO:
+//add Login Display and Process
+// add Register Display and Process
+// process logout
