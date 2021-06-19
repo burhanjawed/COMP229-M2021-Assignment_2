@@ -139,6 +139,28 @@ ul {
   .bottom-text {
     padding-left: 25%;
   }
+
+  .dropdown-menu {
+    background-color: #212121;
+  }
+
+  .dropdown-item{
+    color: #9e9e9e;
+  }
+
+  .dropdown-item:hover{
+    color: white;
+    background-color: transparent;
+  }
+
+  .dropdown-divider {
+    color: white;
+  }
+
+  #dropdownActive {
+    color: white;
+    background-color: transparent;
+  }
   /* End navigation */
 
   /* Start home page */
@@ -665,3 +687,42 @@ ul {
     .editContactBtn, .deleteContactBtn {
       margin-bottom: 4px;
     }
+
+   @media (min-width:768px) {
+      .topBackground{
+        padding-bottom: 29%;
+      }
+    }
+    /* End contact-list table */
+
+    /* Start login area */
+
+    .login {
+      background-color: #212121;
+      padding: 30px;
+      margin-top: 30%;
+      padding-bottom: 40px;
+    }
+
+    .btn-dark {
+      background-color: black;
+    }
+
+    /* End login area /
+
+    /* Start Registration area */
+
+    .form-control{
+      background-color:rgba(37, 37, 37, 0.9);
+      color: white;
+      border: 2px solid rgb(194, 194, 194);
+    }
+
+    input[type=text]:focus, input[type=password]:focus, input[type=email]:focus{
+      background-color:rgba(37, 37, 37, 0.9);
+      color: white;
+      outline: none;
+    }
+
+    /* End Registration area */
+    

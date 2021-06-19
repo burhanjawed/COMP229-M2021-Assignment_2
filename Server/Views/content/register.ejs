@@ -1,7 +1,8 @@
+<div style="background-image: url('../../../../Assets/images/background2.png')" class="topBackground">
 <div class="row">
     <div class="offset-md-3 col-md-6 col-sm-12">
           <div class="login" id="contentArea">
-              <h1 class="display-4">Register</h1>
+              <h1 class="display-3 pt-2 pb-2">Register<span class="other-color">.</span></h1>
 
               <% if(messages.length > 0) { %>
                 <div id="messageArea" class="alert alert-danger">
@@ -10,7 +11,7 @@
               <% } %>
 
               <form method="POST" id="registerForm" novalidate>
-                <p class="hint-text">Create your own account. It's free and only takes a minute.</p>
+                <p class="hint-text">Create an account. It's free and only takes a minute.</p>
                 <div class="form-group">
                   <div class="row">
                     <p class="lead"><i class="fas fa-user-shield"></i> Personal Information</p>
@@ -59,8 +60,8 @@
                  
                                                     
                 <div class="text-end mt-2">
-                  <button id="submitButton" type="submit" class="btn btn-primary">Register</button>
-                  <button id="cancelButton" type="reset" class="btn btn-warning"><i class="fas fa-undo fa-lg"></i> Cancel</button>
+                  <button id="submitButton" type="submit" class="btn btn-dark">Register</button>
+                  <button id="cancelButton" type="reset" class="btn btn-dark"><i class="fas fa-undo fa-lg"></i> Cancel</button>
                 </div>
               </form>
              
@@ -70,4 +71,5 @@
             <a href="/login">Sign in</a>
           </p>
     </div>
+</div>
 </div>
