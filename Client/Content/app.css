@@ -724,5 +724,12 @@ ul {
       outline: none;
     }
 
+    .register {
+      background-color: #212121;
+      padding: 30px;
+      margin-top: 20%;
+      padding-bottom: 40px;
+    }
+
     /* End Registration area */
     
