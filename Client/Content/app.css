@@ -693,6 +693,10 @@ ul {
         padding-bottom: 29%;
       }
     }
+
+    .contacts-list{
+      padding-top: 7%;
+    }
     /* End contact-list table */
 
     /* Start login area */
