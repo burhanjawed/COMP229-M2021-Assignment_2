@@ -25,4 +25,4 @@ router.get('/add', AuthGuard, DisplayAddPage);
 router.post('/add', AuthGuard, ProcessAddPage);
 
 /* GET to perform deletion - DELETE Operation */
-router.post('/delete/:id', AuthGuard, ProcessDeletePage);
+router.get('/delete/:id', AuthGuard, ProcessDeletePage);
