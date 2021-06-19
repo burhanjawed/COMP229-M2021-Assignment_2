@@ -107,6 +107,6 @@ export function ProcessDeletePage(req: Request, res: Response, next: NextFunctio
             res.end(err);
         }
 
-        res.redirect('/contact-list/contact-list');
+        res.redirect('/contact-list');
     });
 }

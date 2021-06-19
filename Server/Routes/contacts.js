@@ -13,5 +13,5 @@ router.get('/update/:id', index_1.AuthGuard, contacts_1.DisplayUpdatePage);
 router.post('/update/:id', index_1.AuthGuard, contacts_1.ProcessUpdatePage);
 router.get('/add', index_1.AuthGuard, contacts_1.DisplayAddPage);
 router.post('/add', index_1.AuthGuard, contacts_1.ProcessAddPage);
-router.post('/delete/:id', index_1.AuthGuard, contacts_1.ProcessDeletePage);
+router.get('/delete/:id', index_1.AuthGuard, contacts_1.ProcessDeletePage);
 //# sourceMappingURL=contacts.js.map
