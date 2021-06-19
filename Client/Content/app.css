@@ -688,10 +688,16 @@ ul {
       margin-bottom: 4px;
     }
 
+    .topBackground{
+      padding-bottom: 29%;
+      z-index: -2;
+    }
+
    @media (min-width:768px) {
-      .topBackground{
-        padding-bottom: 29%;
-      }
+    .topBackground{
+      padding-bottom: 29%;
+      z-index: -2;
+    }
     }
 
     .contacts-list{
