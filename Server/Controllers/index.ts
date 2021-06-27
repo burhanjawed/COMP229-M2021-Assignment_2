@@ -38,6 +38,7 @@ export function DisplayContactPage(req: Request, res: Response, next: NextFuncti
     res.render('index', { title: 'Contact - Burhan Jawed', page: 'contact', displayName: UserDisplayName(req) });
 }
 
+// Display login page
 export function DisplayLoginPage(req: Request, res: Response, next: NextFunction): void
 {
     if(!req.user)
