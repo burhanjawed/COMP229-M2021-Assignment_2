@@ -117,8 +117,12 @@ ul {
  }
 
  .navbar-custom {
-     background-color: #212121;
+  background-color: #212121;
  }
+
+ .navbar-custom-invisible {
+  background-color: rgba(33, 33, 33, 0.0);
+}
 
  .nav-link:hover {
     cursor: url("/Assets/images/cursor2.png"), auto;    
@@ -589,22 +593,20 @@ ul {
 
     /* Start Contact */
 
-    .contact-bg {
-      position: absolute;
-      top: -6%;
-      height: 100%;
-      overflow: hidden;
-      opacity: 0.1;
-      z-index: -1;
-    }
+   .contact-title {
+     margin-left: 20%;
+     margin-top: 10%;
+     margin-bottom: -2%;
+   }
 
     .contact-section {
-      background: rgba(33, 33, 33, 0.9);
+      background: rgba(33, 33, 33);
       max-width: 800px;
-      margin: 10% auto;
+      margin: 0 auto;
       position: relative;
       box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
       padding: 30px;
+      border-radius: 8px;
     }
 
     .contact-section .contact-title{
@@ -622,7 +624,7 @@ ul {
     }
 
     .contact-form .input-text {
-      background: rgba(33, 33, 33, 0.9);
+      background: rgba(33, 33, 33);
       display: block;
       width: 100%;
       height: 36px;
@@ -639,6 +641,7 @@ ul {
 
     .contact-form .input-text:focus {
       outline: none;
+      background: rgba(33, 33, 33);
     }
 
     .contact-form .label {
@@ -733,8 +736,9 @@ ul {
     .topBackgroundAlt {
       background-image: url('/Assets/images/background2.png');
       background-repeat: repeat-x repeat-y;
-      background-size: initial;
       height: 100vh;
+      margin-top: -5%;
+      padding-top: 5%;
     }
 
     .logintxt {
