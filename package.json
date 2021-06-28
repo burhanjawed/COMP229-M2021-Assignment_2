@@ -27,10 +27,12 @@
     "express-session": "^1.17.2",
     "http-errors": "^1.8.0",
     "jquery": "^3.6.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.14",
     "morgan": "^1.10.0",
     "owl.carousel": "^2.3.4",
     "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.1.0"
   },
@@ -45,10 +47,13 @@
     "@types/express-session": "^1.17.3",
     "@types/http-errors": "^1.8.0",
     "@types/jquery": "^3.5.5",
+    "@types/jsonwebtoken": "^8.5.2",
     "@types/mongoose": "^5.11.97",
     "@types/morgan": "^1.9.2",
     "@types/node": "^15.6.1",
     "@types/passport": "^1.0.6",
-    "@types/passport-local": "^1.0.33"
+    "@types/passport-jwt": "^3.0.5",
+    "@types/passport-local": "^1.0.33",
+    "@types/passport-local-mongoose": "^4.0.14"
   }
 }

@@ -8,6 +8,11 @@ import mongoose from 'mongoose';
 // modules for authentication
 import session from 'express-session';
 import passport from 'passport';
+
+import passportJWT from 'passport-jwt';
+let JWTStrategy = passportJWT.Strategy; // alias
+let ExtractJWT = passportJWT.ExtractJwt;
+
 import passportLocal from 'passport-local';
 
 // modules for cors
@@ -76,6 +81,11 @@ passport.use(User.createStrategy());
 // serialize and deserialize user data
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+// configure JWT Options
+/*let JWTOptions = {};
+JWTOptions.jwtFromRequest = ExtractJWT.fromAuthHeaderAsBearerToken();
+JWTOptions.secretOrKey = DBConfig.Secret;*/
 
 // use routes
 app.use('/', indexRouter);

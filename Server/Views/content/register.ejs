@@ -1,8 +1,11 @@
 <div class="topBackground">
 <div class="row">
-    <div class="offset-md-3 col-md-6 col-sm-12">
+  <h1 class="display-3 text-end logintxt">Register<span class="other-color">.</span></h1>
+</div>
+<div class="container">
+<div class="row">
+    <div class="offset-md-2 col-md-8 col-sm-12">
           <div class="register" id="contentArea">
-              <h1 class="display-3 pt-2 pb-2">Register<span class="other-color">.</span></h1>
 
               <% if(messages.length > 0) { %>
                 <div id="messageArea" class="alert alert-danger">
@@ -11,7 +14,9 @@
               <% } %>
 
               <form method="POST" id="registerForm" novalidate>
-                <p class="hint-text">Create an account. It's free and only takes a minute.</p>
+                <p class="hint-text text-center">Create an account. It's free and only takes a minute.</p>
+
+                <!-- Personal Info -->
                 <div class="form-group">
                   <div class="row">
                     <p class="lead"><i class="fas fa-user-shield"></i> Personal Information</p>
@@ -25,16 +30,17 @@
                 </div>
                 <div class="form-group">
                   <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 pt-3">
                       <input type="email" class="form-control" id="emailAddress" name="EmailAddress" required
                       value="" placeholder="Email Address">
                     </div>
                   </div>
                 </div>
-
+                  
+                  <!-- User Info -->
                 <div class="form-group mt-4">
                   <div class="row">
-                    <p class="lead"><i class="fas fa-database"></i>System Identification</p>
+                    <p class="lead"><i class="fas fa-database"></i>User Information</p>
                     <div class="col-md-12">
                       <input type="text" class="form-control" id="username" name="username"  required
                       value="" placeholder="Username">
@@ -43,7 +49,7 @@
                 </div>
                 <div class="form-group">
                   <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 pt-3">
                       <input type="password" class="form-control" id="password" name="password"  required
                       value="" placeholder="Password">
                     </div>
@@ -51,15 +57,15 @@
                 </div>
                 <div class="form-group">
                   <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 pt-3">
                       <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"  required
                       value="" placeholder="Confirm Password">
                     </div>
                   </div>
                 </div>
                  
-                                                    
-                <div class="text-end mt-2">
+                 <!-- Buttons -->                                   
+                <div class="text-end mt-2 pt-3">
                   <button id="submitButton" type="submit" class="btn btn-dark">Register</button>
                   <button id="cancelButton" type="reset" class="btn btn-dark"><i class="fas fa-undo fa-lg"></i> Cancel</button>
                 </div>
@@ -71,5 +77,6 @@
             <a href="/login">Sign in</a>
           </p>
     </div>
+</div>
 </div>
 </div>
