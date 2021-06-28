@@ -61,6 +61,7 @@ ul {
 	padding: 0;
 }
 
+
 /* Start navigation */
 
 .home-underline {
@@ -714,6 +715,7 @@ ul {
       margin-top: 10%;
       padding-bottom: 15%;
       box-shadow: 0px 10px 30px #0e0e0e;
+      border-radius: 8px;
     }
 
     .btn-dark {
@@ -725,11 +727,19 @@ ul {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
+      height: 100vh;
+    }
+
+    .topBackgroundAlt {
+      background-image: url('/Assets/images/background2.png');
+      background-repeat: repeat-x repeat-y;
+      background-size: initial;
+      height: 100vh;
     }
 
     .logintxt {
       padding-right: 10%;
-      padding-top: 10%;
+      padding-top: 5%;
     }
 
     .loginIcon {
