@@ -385,8 +385,10 @@ ul {
 
   .services-area .services {
     background: #212121;
+    border-radius: 8px;
     padding: 2rem 0;
     width: 16rem;
+    height: 28rem;
     margin: 5rem .5rem;
     transition: box-shadow .7s ease;
   }
@@ -692,20 +694,16 @@ ul {
       margin-bottom: 4px;
     }
 
-    .topBackground{
-      padding-bottom: 29%;
-      z-index: -2;
-    }
-
-   @media (min-width:768px) {
-    .topBackground{
-      padding-bottom: 29%;
-      z-index: -2;
-    }
-    }
-
     .contacts-list{
       padding-top: 7%;
+    }
+
+    .topBackgroundAlt {
+      background-image: url('/Assets/images/background2.png');
+      background-repeat: repeat-x repeat-y;
+      height: 100vh;
+      margin-top: -5%;
+      padding-top: 5%;
     }
     /* End contact-list table */
 
@@ -716,13 +714,17 @@ ul {
       padding: 45px;
       padding-top: 5%;
       margin-top: 10%;
-      padding-bottom: 15%;
+      padding-bottom: 7%;
       box-shadow: 0px 10px 30px #0e0e0e;
       border-radius: 8px;
     }
 
     .btn-dark {
       background-color: black;
+    }
+
+    .btn-dark:hover {
+      background-color: rgb(26, 26, 26);
     }
 
     .topBackground {
@@ -733,14 +735,6 @@ ul {
       height: 100vh;
     }
 
-    .topBackgroundAlt {
-      background-image: url('/Assets/images/background2.png');
-      background-repeat: repeat-x repeat-y;
-      height: 100vh;
-      margin-top: -5%;
-      padding-top: 5%;
-    }
-
     .logintxt {
       padding-right: 10%;
       padding-top: 5%;
@@ -749,6 +743,15 @@ ul {
     .loginIcon {
       padding-bottom: 10%;
       color: white;
+    }
+
+    .form-control {
+      border-radius: 30px;
+      
+    }
+
+    .form-control:focus {
+      outline: none;
     }
 
     /* End login area /
