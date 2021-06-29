@@ -738,8 +738,9 @@ ul {
     }
 
     .logintxt {
-      padding-right: 10%;
-      padding-top: 5%;
+      padding-top: 10%;
+      padding-left: 29%;
+      margin-bottom: -3%;
     }
 
     .loginIcon {
@@ -778,9 +779,33 @@ ul {
     }
 
     .logintxt-registration {
-      padding-right: 8%;
-      padding-top: 5%;
+      padding-top: 10%;
+      padding-left: 22%;
+      margin-bottom: -4%;
     }
 
     /* End Registration area */
+
+    /* Start Add Contact Page */
+
+    .addContactTxt {
+      padding-top: 10%;
+      margin-bottom: -10%;
+    }
+
+    /* End Add Contact Page */
+
+    /* Start Update Contact Page */
+
+    .updateContactTxt {
+      padding-top: 10%;
+      margin-bottom: -4%;
+    }
+
+    .input-group-text {
+      background-color: #181818;
+      color: white;
+    }
+
+    /* End Update Contact Page */
     
