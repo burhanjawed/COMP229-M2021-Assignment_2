@@ -282,7 +282,19 @@ ul {
     transform: translateX(-50%);
   }
   /* End animated mouse icon */
-
+  .tag {
+  }
+  
+  .tag {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 1s;
+  }
+  
+  .tag.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
 
   /* End home page */
 
@@ -705,6 +717,57 @@ ul {
       margin-top: -5%;
       padding-top: 5%;
     }
+
+    .tableTransition {
+      animation: slide_down 1.1s ease;
+      -webkit-animation: slide_down 1.1s ease;
+    }
+
+    .fadeTransition {
+      animation: fade_in 2s ease;
+      -webkit-animation: fade_in 2s ease;
+    }
+
+    @keyframes fade_in {
+      0% {
+        opacity:0;
+      }
+      100% {
+        opacity:1;
+      }
+    }
+
+    @-webkit-keyframes fade_in {
+      0% {
+        opacity:0;
+      }
+      100% {
+        opacity:1;
+      }
+    }
+
+    @keyframes slide_down {
+      0% {
+        opacity:0;
+        transform: translateY(-250px);
+      }
+      100% {
+        opacity:1;
+        transform: translateY(0);
+      }
+    }
+
+    @-webkit-keyframes slide_down {
+      0% {
+        opacity:0;
+        transform: translateY(-250px);
+      }
+      100% {
+        opacity:1;
+        transform: translateY(0);
+      }
+    }
+
     /* End contact-list table */
 
     /* Start login area */
