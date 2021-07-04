@@ -336,6 +336,15 @@ ul {
     left: 12rem;
   }
 
+  .abt-pic {
+    margin-left: 0%;
+  }
+
+  .abt-headline
+  {
+    padding-right: 0%;
+  }
+
   /* End about page */
 
   /* Start Brands */
