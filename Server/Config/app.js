@@ -70,6 +70,19 @@ app.use(passport_1.default.session());
 passport_1.default.use(user_1.default.createStrategy());
 passport_1.default.serializeUser(user_1.default.serializeUser());
 passport_1.default.deserializeUser(user_1.default.deserializeUser());
+let JWTOptions = {};
+JWTOptions.jwtFromRequest = ExtractJWT.fromAuthHeaderAsBearerToken();
+JWTOptions.secretOrKey = DBConfig.Secret;
+let strategy = new JWTStrategy(JWTOptions, (jwt_payload, done) => {
+    user_1.default.findById(jwt_payload.id)
+        .then(user => {
+        return done(null, user);
+    })
+        .catch(err => {
+        return done(err, false);
+    });
+});
+passport_1.default.use(strategy);
 app.use('/', index_1.default);
 app.use('/projects', projects_sub_pages_1.default);
 app.use('/contact-list', contacts_1.default);

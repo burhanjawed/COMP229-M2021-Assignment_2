@@ -2,6 +2,8 @@ import express from 'express';
 const router = express.Router();
 export default router;
 
+import jwt from 'jsonwebtoken';
+
 // create contacts controller instance
 import { DisplayAddPage, DisplayContactListPage, DisplayUpdatePage, ProcessAddPage, ProcessDeletePage, ProcessUpdatePage } from '../Controllers/contacts';
 

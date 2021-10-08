@@ -2,6 +2,10 @@ import express, { Request, Response, NextFunction } from 'express';
 
 import passport from 'passport';
 
+// enable JWT
+import jwt from 'jsonwebtoken';
+import * as DBConfig from '../Config/db';
+
 // create an instance of user model
 import User from '../Models/user';
 
@@ -75,6 +79,27 @@ export function ProcessLoginPage(req: Request, res: Response, next: NextFunction
                 return next(err);
             }
 
+            const payload = 
+            {
+                id: user._id,
+                displayName: user.displayName,
+                username: user.username,
+                email: user.email
+            }
+
+            const authToken = jwt.sign(payload, DBConfig.Secret, 
+            {
+                expiresIn: 604800 // 1 week
+            });
+
+            // getting ready to convert to API
+            /*TODO res.json({success: true, msg: 'User Logged in Successfully', user: {
+                id: user._id,
+                displayName: user.displayName,
+                username: user.username,
+                email: user.email
+            }, token: authToken});*/
+
             return res.redirect('/contact-list');
         });
     })(req, res, next);
@@ -115,6 +140,10 @@ export function ProcessRegisterPage(req: Request, res: Response, next: NextFunct
         }
 
         // after successful registration - login the user
+        
+        // getting ready to convert to API
+        /*TODO res.json({success: true, msg: 'User Registered Successfully'});*/
+        
         return passport.authenticate('local')(req, res, () => {
             return res.redirect('/contact-list');
         });

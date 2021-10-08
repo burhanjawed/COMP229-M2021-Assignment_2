@@ -1,5 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 
+import jwt from 'jsonwebtoken';
+
 // connect to contact model
 import Contacts from '../Models/contacts';
 
